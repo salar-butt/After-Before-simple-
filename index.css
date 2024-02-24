@@ -1,0 +1,164 @@
+*{
+    padding:0;
+    margin: 0;
+    /* border: 1px solid red; */
+}
+.main{
+    /* border:1px solid red; */
+height:95vh;
+width:95vw;
+margin:10px auto;
+}
+ button{
+    position: relative;
+   margin: 50px 30px;
+    height:15vh;
+    width:50vh;
+    z-index: 1;
+background-color: rgb(0, 174, 255); 
+    color:white;
+    border:none;
+    text-align: center;   
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+
+}
+button::after{
+    content: '';
+    z-index:    -1;
+position: absolute;
+border: 1px solid black;
+background-color: red;
+}
+button:hover{
+ color:blue;
+}
+.left{
+    border:5px solid rgb(0, 174, 255);
+
+overflow: hidden;
+}
+.left::after{
+    height:100%;
+    width:100%;
+    left:-105%;
+top:0%;
+transition: 5s;
+}
+.left:hover::after{
+left:0%;
+transition: 0.5s;
+}
+.right::after{
+    top:0%;
+    left:100%;
+    right:-100%;
+    }
+    .top::after{
+        top:-105%;
+        left:0%;
+        right:0%;
+        bottom:100%;
+        }
+        .top:hover::after{
+            top:0%;
+            transition: 0.5s;
+            }
+  .bottom::after{
+        top:100%;
+        left:0%;
+        right:0%;
+        bottom:-100%;
+        }
+.bottom:hover::after{
+            top:0%;
+            transition: 0.5s;
+            }
+              .grow::after{
+                top:0%;
+                left:0%;
+                right:0%;
+                bottom:0%;
+                transform: scale(0,0);
+                transition: 1s;
+                }
+                 .grow:hover::after{
+                   transform: scale(1,1);
+                    transition: 0.5s;
+                    }
+.ellipse::after{
+ top:0%;
+ left:0%;
+ /* right:0%;
+ bottom:0%; */
+ border-radius: 100%;
+
+ transform: scale(0,0);
+ transition: 1s;
+                        }
+.ellipse:hover::after{
+    left:0%;
+    right:0%;
+    top:0%;
+    bottom:0%;
+transform: scale(1.5,1.5);
+transition: 0.5s;
+ }
+      .sker::after{
+            height:0%;
+            width:0%;
+            top:50%;
+            left:50%;
+            transition: 1s;
+            transform: skew(-30deg);
+        }
+           .sker:hover::after{
+               left:0%;
+               height: 130%;
+               width:120%;
+               right:0%;
+               left:-10%;
+               top:-10%;
+               bottom:0%;
+           transform: skew(-30deg);
+           transition: 0.5s;
+            }
+            .backward::after{
+                height:0%;
+                width:0%;
+                top:50%;
+                left:50%;
+                transition: 1.5s;
+                transform: skew(-30deg);
+            }
+               .backward:hover::after{
+                   left:0%;
+                   height: 130%;
+                   width:120%;
+                   right:0%;
+                   left:-10%;
+                   top:-10%;
+                   bottom:0%;
+               transform: skew(30deg);
+               transition: 0.5s;
+                }
+                .spin::after{
+                    height:0%;
+                    width:0%;
+                    top:50%;
+                    left:50%;
+                    transition: 0.3s;
+                    transform: rotate(360);        
+
+                }
+                   .spin:hover::after{
+                       left:0%;
+                       height: 130%;
+                       width:120%;
+                       right:0%;
+                       left:-10%;
+                       top:-10%;
+                       bottom:0%;
+transform: rotate(360deg);        
+           transition: 0.3s;
+                    }
